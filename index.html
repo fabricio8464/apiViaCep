@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/0e9ae9d91b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./view/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pesquisa CEP:</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="conteudo">
+            <h2 class="titulo">Busca e Cadastro de CEP:</h2>
+            <form id="form1" name="formulario" class="form-control">
+                <label for="cep">Cep:</label>
+                <input type="text" name="cep" id="cep" maxlength="10" onblur="pesquisaCep(this.value);">
+                <!-- <button class="verificaCep" id="checaCep" name="verCep">Verificar CEP</button> -->
+
+                <label for="rua">Rua:</label>
+                <input type="text" name="rua" id="rua">
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" name="bairro" id="bairro">
+
+                <label for="cidade">UF:</label>
+                <input type="text" name="cidade" id="cidade">
+
+                <label for="uf">Estado:</label>
+                <input type="text" name="uf" id="uf">
+
+
+                <div class="butoes">
+                    <button id="limpaform" class="btn btn-warning" onclick="limpaFormulario();">Limpar</button>
+                    <button name="cadastrar" id="cadastra" class="btn btn-primary" onclick="cadastrarCep();">Cadastrar</button>
+                    <!-- <button name="ver_registros" id="reg" class="btn btn-info" onclick="chamaConsulta();">Registros</button> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="lista-item">
+        <input type="checkbox" class="trigger-input" id="faq-titulo-1">
+        <div class="trigger-wrapper">
+            <label for="faq-titulo-1">
+                <h2 class="faq-titulo"> Listar Registros</h2>
+            </label>
+            <!-- <div class="faq-conteudo"></div> -->
+            <table class="tabela-cidades">
+                <tr>
+                    <th>Cep</th>
+                    <th>Rua</th>
+                    <th>Bairro</th>
+                    <th>Estado</th>
+                    <th>UF</th>
+                </tr>
+            </table>
+
+            <p id="listaReg" class="faq-conteudo"></p>
+        </div>
+    </div>
+
+
+
+    <div id="modalPai" class="modalCad">
+        <div id="modalFilho" class="cadfeito">
+            <h2><i class="fas fa-check-circle"></i>Cadastro Efetuado!</h2>
+            <button id="btnConfirma" class="btn btn-success">Confirmar</button>
+        </div>
+    </div>
+
+    <div id="modalErroPai" class="modalCadErro">
+        <div id="modalFilho" class="cadErro">
+            <h2> <i class="fas fa-exclamation-triangle"></i>Erro ao cadastrar!</br>Verifique se o cep digitado ja encontra-se cadastrado ou é um cep inexistente.</h2>
+
+            <div class="btnError">
+                <button id="btnConfirmaErro" class="btn btn-warning aviso"><i class="fas fa-check-circle"></i></button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="./view/jQuery.js"></script>
+    <script src="./view/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+ .container {
+     margin-top: 20px;
+     width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ .conteudo {
+     position: relative;
+     justify-content: center;
+     align-items: center;
+     padding-left: 200px;
+     margin-left: auto;
+     margin-right: auto;
+     width: 70%;
+     height: 70vh;
+     border: 3px black solid;
+     border-radius: 18px;
+ }
+ 
+ .titulo {
+     margin-top: 10px;
+ }
+ 
+ .form-control {
+     border: none;
+     margin-top: 30px;
+     width: 70%;
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .butoes {
+     margin-top: 20px;
+ }
+ /*########################################*/
+ /*PARTE DO MODAL DE SUCESSO AO CADASTRAR*/
+ /*######################################*/
+ 
+ .modalCad {
+     width: 100vw;
+     height: 100vh;
+     background-color: rgba(0, 0, 0, .3);
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     z-index: 2000;
+     display: none;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .cadfeito {
+     background-color: white;
+     width: 50%;
+     height: 120px;
+     min-width: 500px;
+     border-radius: 18px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ .modalCad.aparece {
+     display: flex;
+ }
+ 
+ .btn-success {
+     margin-left: 250px;
+     margin-top: 70px;
+ }
+ /*########################################*/
+ /*PARTE DO MODAL DE ERRO! @ CADASTRAR*/
+ /*######################################*/
+ 
+ .modalCadErro {
+     width: 100vw;
+     height: 100vh;
+     background-color: rgba(0, 0, 0, .3);
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     z-index: 2000;
+     display: none;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .cadErro {
+     background-color: white;
+     width: 50%;
+     height: 200px;
+     min-width: 350px;
+     border-radius: 18px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ .modalCadErro.aparece {
+     display: flex;
+ }
+ 
+ .fa-exclamation-triangle {
+     color: red;
+     margin-right: 10px;
+ }
+ 
+ .btn.btn-warning.aviso {
+     margin-left: -600px;
+     margin-top: 150px;
+     width: 80px;
+ }
+ /* ################################################ */
+ /* Parte de registro com trigger css */
+ /* ################################################ */
+ 
+ .tabela-cidades {
+     margin-left: 50px;
+     width: 100%;
+     height: auto;
+ }
+ 
+ .lista-item {
+     width: 70%;
+     height: auto;
+     margin: 0 auto;
+     margin-bottom: 20px;
+     margin-top: 20px;
+     border-radius: 4px;
+     background-color: #FFE4B5;
+ }
+ 
+ .trigger-wrapper {
+     width: auto;
+     height: auto;
+     margin: 0 auto;
+     padding: 20px;
+ }
+ 
+ .trigger-input {
+     display: none;
+ }
+ 
+ .faq-titulo {
+     cursor: pointer;
+     display: flex;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 30px;
+     display: flex;
+     padding: 10px;
+ }
+ 
+ .faq-titulo::before {
+     display: inline-block;
+     height: 12px;
+     width: 24px;
+     margin-right: 10px;
+     background-color: #BEB0F4;
+ }
+ 
+ .faq-titulo::after {
+     content: '+';
+     margin-left: 50px;
+     transition: transform .3s ease;
+ }
+ 
+ .faq-conteudo {
+     padding: 10px;
+     color: rgb(235, 117, 20);
+     font-family: sans-serif;
+     font-size: .875em;
+     line-height: 1.4em;
+     display: none;
+ }
+ 
+ .trigger-input:checked+.trigger-wrapper .faq-conteudo {
+     display: block;
+ }
+ /*###############################################  */
+ /* parte dos dispositivos moveis */
+ /*###############################################  */
+ 
+ @media screen and (max-width: 1024px) {
+     .container {
+         width: 100vw;
+         margin-left: auto;
+         margin-right: auto;
+     }
+     .conteudo {
+         align-items: center;
+         justify-content: center;
+         padding: 0px;
+         margin-top: 70px;
+         margin-left: auto;
+         margin-right: auto;
+         width: 80vw;
+         height: 70vh;
+     }
+     .titulo {
+         font-size: 22px;
+         display: inline-block;
+     }
+     .form-control {
+         border: none;
+         margin-top: 30px;
+         margin-left: 60px;
+         width: 50%;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+     }
+     .butoes {
+         margin-top: 20px;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+     }
+     .btn-warning {
+         width: 95px;
+     }
+     .btn-primary {
+         margin-left: 10px;
+     }
+     .modalCad {
+         width: 100vw;
+         height: 100vh;
+         background-color: rgba(0, 0, 0, .3);
+         position: fixed;
+         top: 0px;
+         left: 0px;
+         z-index: 2000;
+         display: none;
+         align-items: center;
+         justify-content: center;
+     }
+     .cadfeito {
+         background-color: white;
+         width: 70%;
+         height: 150px;
+         min-width: 350px;
+         border-radius: 18px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .modalCad.aparece {
+         display: flex;
+     }
+     .btn-success {
+         margin-left: 20px;
+         margin-top: 70px;
+     }
+     /*########################################*/
+     /*PARTE DO MODAL DE ERRO! @ CADASTRAR*/
+     /*######################################*/
+     .modalCadErro {
+         width: 100vw;
+         height: 100vh;
+         background-color: rgba(0, 0, 0, .3);
+         position: fixed;
+         top: 0px;
+         left: 0px;
+         z-index: 2000;
+         display: none;
+         align-items: center;
+         justify-content: center;
+     }
+     .modalCadErro.aparece {
+         display: flex;
+     }
+     .cadErro {
+         background-color: white;
+         width: 100%;
+         min-width: 350px;
+         height: 170px;
+         border-radius: 18px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+     .fa-exclamation-triangle {
+         color: red;
+         margin-right: 10px;
+     }
+     .btnError {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     .btn.btn-warning.aviso {
+         margin-left: -350px;
+         margin-top: 120px;
+         width: 50px;
+         height: 30px;
+     }
+     .lista-item {
+         width: 100%;
+         height: auto;
+         margin: 0 auto;
+         margin-bottom: 20px;
+         margin-top: 20px;
+         border-radius: 4px;
+         background-color: #FFE4B5;
+     }
+     .trigger-wrapper {
+         width: auto;
+         height: auto;
+         margin: 0 auto;
+         padding: 20px;
+     }
+     .trigger-input {
+         display: none;
+     }
+     .faq-titulo {
+         cursor: pointer;
+         text-align: center;
+         align-items: center;
+         justify-content: center;
+         margin-left: 0px;
+         display: flex;
+         padding: 10px;
+     }
+     .faq-titulo::before {
+         content: '';
+         display: inline-block;
+         height: 12px;
+         width: 24px;
+         margin-right: 10px;
+         background-color: #BEB0F4;
+     }
+     .faq-titulo::after {
+         content: '+';
+         margin-left: 150px;
+         transition: transform .3s ease;
+     }
+     .faq-conteudo {
+         padding: 10px;
+         color: rgb(235, 117, 20);
+         font-family: sans-serif;
+         font-size: .875em;
+         line-height: 1.4em;
+         display: none;
+         width: 100%;
+         height: auto;
+     }
+     .trigger-input:checked+.trigger-wrapper .faq-conteudo {
+         display: block;
+     }
+ }
